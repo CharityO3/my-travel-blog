@@ -62,6 +62,11 @@ nav ul{
   border-radius: 5px;
 }
 
+.blog-content{
+  background-color: #f8f8ff;
+  color: #eeeeee;
+}
+
 .content{
   position: absolute;
   top: 60%;
@@ -214,6 +219,8 @@ nav ul{
 
 .content-container{
   padding: 60px 20px;
+  background-color: white;
+  color: black;
   
 }
 
