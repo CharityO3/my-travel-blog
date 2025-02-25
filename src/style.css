@@ -11,14 +11,41 @@ section{
 }
 
 p{
-  
-  font-size: 20px;
+  font-size: 16px;
 }
 
 nav{
   background-color: black;
   color: white;
   padding: 10px 0;
+}
+
+h3{
+  font-weight: 700;
+}
+
+nav li{
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin: 30px;
+  font-weight: 600;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  transition: all 100ms ease-in-out;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+
+.content-container{
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .hero{
@@ -29,6 +56,10 @@ nav{
   height: 80vh; 
   text-align: center;
   color: white;
+}
+
+.blog-images img{
+  border-radius: 5px;
 }
 
 .content{
@@ -54,14 +85,6 @@ nav{
   line-height: 1.5;
 }
 
-.content h3{
-  margin: 0;
-  font-weight: 900;
-  font-size: 24px;
-  list-style: 1.5; 
-  letter-spacing: 5px;
-}
-
 .content a{
   font-weight: 700;
   font-size: 14px;
@@ -75,6 +98,47 @@ nav{
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
+}
+
+.read-more {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #272044;
+  padding: 16px 32px;
+  border: 1px solid black;
+  margin-top: 32px;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.blog-btn{
+  display: inline-block;
+  border: 1px solid black;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px 9px;
+  font-size: 12px;
+  color: white;
+  background-color: #272044; 
+}
+.read-more:hover {
+ background-color: #272044;
+ color: white;
+}
+
+.hero-blog{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/blog-image.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 260px 0;
 }
 
 .video-container {
@@ -127,24 +191,16 @@ nav{
   text-decoration: underline;
 }
 
-nav li{
-  display: inline;
-  list-style: none;
-  line-height: 42px;
-  margin: 30px;
-  font-weight: 600;
+.blog-posts{
+  border-bottom: 3px solid #eeeeee;
+  border-image: linear-gradient(to right, orange 3%, #eeeeee 3%) 1;
 }
 
-nav a{
-  text-decoration: none;
-  color: white;
-  transition: all 100ms ease-in-out;
+.content-container p{
+  font-size: 12px;
+  line-height: 2;
 }
 
-nav ul{
-  margin: 0;
-  padding: 0;
-}
 
 .logo{
   background-color: white;
@@ -191,18 +247,31 @@ nav ul{
     margin: 10px 0 0 0;
   }
 
-  .logo-spacing{
-   display: none !important;
-  }
-
-  .grid{
-    grid-template-columns: 1fr;
-    grid-gap: 32px
+  section{
+    padding: 30px;
   }
 
   nav li a{
     text-align: center;
   }
 
+  .logo-spacing{
+   display: none !important;
+  }
+
+  .grid{
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+    margin-top: 60px;
+  }
+
+  .content-container{
+    margin-top: 60px;
+  }
+
+  .content-container p{
+    font-size: 8px;
+    line-height: 1.5;
+  }
 }
 
