@@ -190,12 +190,18 @@ nav ul{
 
 .grid{
   display: grid;
-  grid-gap: 64px;
+  
 }
 
 .grid-2-columns{
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
   background-color: white;
+}
+
+.grid img{
+  width: 100%; 
+  height: 150px; 
+  object-fit: cover;
 }
 
 .nav-container{
