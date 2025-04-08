@@ -234,6 +234,10 @@ footer h4{
   border-radius: 0;
 }
 
+/* .grid-2-img img{
+  grid-column: span 2;
+} */
+
 .grid-section img{
   object-fit: cover;
   width: 90%;
