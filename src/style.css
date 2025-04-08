@@ -64,26 +64,64 @@ nav ul{
   padding: 0;
 }
 
-footer{ 
-  color: white;
-  background-image: linear-gradient(rgba(200, 200, 200, 0.9), rgba(200, 200, 200, 0.9));
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20px;
-  text-align: center;
+footer .social-links a{
+  text-decoration:none;
+  margin: 0 20px;
+  color: #eee;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
 }
+
+footer .social-links a:hover {
+  color: white; 
+  opacity: 1;   
+}
+
+footer .portfolio-links a{
+  margin: 20px;
+  color: white;
+  background-color: #6D6D6D;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 150ms ease-in-out;
+}
+
+footer .portfolio-links a:hover{
+  color: white;
+  background-color: #272044;
+}
+
+footer{
+  padding: 2px; 
+  background-color: #111111;
+  margin-top: 80px;
+}
+
+.social-links {
+  position: relative;
+}
+
+.social-links::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 80%; 
+  height: 1px; 
+  background-color: rgba(128, 128, 128, 0.2); 
+  margin-left: 10%; 
+}
+
 
 footer p{
   font-size: 14px;
-  color: #272044;
+  color: grey;
 }
 
 footer a{
   text-decoration: none;
-}
-
-footer h4{
-  color: black;
 }
 
 .content-container{
@@ -348,6 +386,17 @@ footer h4{
 
   .grid-section img{
     height: auto;
+  }
+
+  footer .portfolio-links a{
+    text-align: center;
+    margin: 10px;
+  }
+
+  footer .portfolio-links a{
+    margin: 10px;
+    padding: 5px 7px;
+    font-size: 14px;
   }
 }
 
