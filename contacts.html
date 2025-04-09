@@ -23,50 +23,21 @@
         <p class="d-none d-sm-block">GlobeScribe</p>
       </div>
       <ul>
-        <li class="active"><a href="/" title="Homepage">HOME</a></li>
+        <li><a href="/" title="Homepage">HOME</a></li>
         <li> <a href="/blog.html" title="My blog"> BLOG</a></li>
         <li> <a href="/destinations.html" title="Destinations"> DESTINATIONS</a></li>
-        <li> <a href="/contacts.html" title="Contact Info">CONTACT</a></li>
+        <li class="active"> <a href="/contacts.html" title="Contact Info">CONTACT</a></li>
       </ul>
     </nav>
   </div>
-
-  <div class="hero d-none d-sm-block">
-    <div class="content">
-      <h1>JOURNEY. ENVISION. REVEAL</h1>
-      <h2 class="mt-5">This blog highlights stunning destinations, unforgettable adventures, and hidden treasures across the globe.</h2>
-      <h2 class="mb-3 mt-3">Join me on this adventure!</h2>
-      <a href="#more">Discover more</a> <!-- This goes to blog-->
-    </div>
-    <div class="video-container d-none d-sm-block">
-      <video class="video-background" autoplay loop muted playsinline>
-        <source src="videos/header-video.mp4" type="video/mp4">
-      </video>
-    </div> 
+  
+  <div class="content-container web-message">
+    <h1>🚧 Coming Soon</h1>
+    <p>We're working hard to launch the website. Stay tuned!  
+    <p id="countdown">Loading...</p></p>
   </div>
 
-  <main>
-    <section class="grid grid-section grid-2-columns" style="background-color: #F9F7FE;">
-      <div>
-        <img src="/Images/my_image.jpg" class="rounded img-fluid" alt="my image">
-      </div>
-      <div>
-        <h3 class="mb-5">Thanks For Looking!</h3>
-        <p class="text-muted"> 
-          I'm <strong>Charity</strong>, the lady behind this website. I'm Nigerian and have been traveling for a couple of years now.
-          <br />
-          <br />
-          I started this travel blog in 2025 to document my own international trips, share my photos, and help others learn how to travel the world and find some really good spots off the beaten path.
-          <br />
-          <br />
-          I'm currently based in Poznan, Poland. I haven’t been everywhere, but it’s on my list. I hope this world travel blog can help and inspire you in your own journey as well!
-        </p>
-        <a href="/blog.html" class="read-more">Read more →</a> <!-- this goees to destinations -->
-      </div>
-    </section>
-  </main>
-
- <footer>
+  <footer>
     <div class="social-links text-center portfolio-links ">
       <a href="https://www.instagram.com/t_tthatcherluv?igsh=eGs1enoxNnN5ODN1&utm_source=qr" target="_blank" title="Instagram"><i class="fa-brands fa-instagram mt-5"></i></a>
       <a href="https://www.linkedin.com/in/charity-orhoridiohwo/" target="_blank" class="social-link" title="Connect on LinkedIn"><i class="fa-brands fa-linkedin"></i></a> 
@@ -78,5 +49,27 @@
       <p class="text-center mt-4"><small>This website is continually evolving with constant changes and improvements.</small></p>
     </div>
   </footer>
+
+  <script>
+    const launchDate = new Date("2025-06-01T00:00:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "We're live!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
