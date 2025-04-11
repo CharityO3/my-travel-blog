@@ -26,10 +26,10 @@
         <li><a href="/" title="Homepage">HOME</a></li>
         <li> <a href="/blog.html" title="My blog"> BLOG</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/destinations.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="/destinations.html" id="destinationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             DESTINATIONS
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" aria-labelledby="destinationsDropdown">
             <li><a class="dropdown-item" href="/destinations.html">AFRICA</a></li>
             <li><a class="dropdown-item" href="/destinations.html">EUROPE</a></li>
             <li><a class="dropdown-item" href="/destinations.html">ASIA</a></li>
@@ -59,26 +59,7 @@
     </div>
   </footer>
 
-  <script>
-    const launchDate = new Date("2025-06-01T00:00:00").getTime();
+  <script src="src/script.js"></script>
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML =
-        `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "We're live!";
-      }
-    }, 1000);
-  </script>
 </body>
 </html>

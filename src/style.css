@@ -22,7 +22,7 @@ section p{
 nav{
   background-color: black;
   color: white;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 h3{
@@ -45,11 +45,12 @@ h5::after {
   background-color: #ff8a65; 
   transform: translateX(-50%); 
 }
+
 nav li{
   display: inline;
   list-style: none;
-  line-height: 42px;
-  margin: 30px;
+  line-height: 40px;
+  margin: 20px;
   font-weight: 600;
 }
 
@@ -423,7 +424,7 @@ ul .dropdown-menu a:hover{
   color: #f8f8ff;
   text-align: center;
   padding-top: 100px;
-  margin: 100px auto;
+  margin: 200px auto;
 }
 
 .web-message p{
@@ -463,13 +464,13 @@ document.querySelector('#destinationsDropdown').addEventListener('click', functi
 
   nav li{
     margin: 5px;
-
   }
   
   nav a{
     font-size: 12px;
     margin: 10px;
   }
+
 
   p{
     font-size: 16px;
@@ -478,6 +479,7 @@ document.querySelector('#destinationsDropdown').addEventListener('click', functi
 
   nav li a{
     text-align: center;
+    margin: 0 ;
   }
 
   .logo-spacing{
@@ -543,6 +545,10 @@ document.querySelector('#destinationsDropdown').addEventListener('click', functi
   .dropdown-menu {
     position: static;
     float: none;
+  }
+
+  ul li{
+    font-size: 8px;
   }
 }
 
