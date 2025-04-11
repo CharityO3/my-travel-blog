@@ -22,10 +22,19 @@
         </a>
         <p class="d-none d-sm-block">GlobeScribe</p>
       </div>
-      <ul>
+      <ul class="nav">
         <li class="active"><a href="/" title="Homepage">HOME</a></li>
         <li> <a href="/blog.html" title="My blog"> BLOG</a></li>
-        <li> <a href="/destinations.html" title="Destinations"> DESTINATIONS</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/destinations.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            DESTINATIONS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/destinations.html">AFRICA</a></li>
+            <li><a class="dropdown-item" href="/destinations.html">EUROPE</a></li>
+            <li><a class="dropdown-item" href="/destinations.html">ASIA</a></li>
+          </ul>
+        </li>
         <li> <a href="/contacts.html" title="Contact Info">CONTACT</a></li>
       </ul>
     </nav>
