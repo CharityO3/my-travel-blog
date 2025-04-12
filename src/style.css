@@ -341,6 +341,7 @@ ul .dropdown-menu a:hover{
 
 .nav-link {
   color: white;
+  padding: 0;
 }
 
 
@@ -413,6 +414,14 @@ ul .dropdown-menu a:hover{
   max-width: 30px;
 }
 
+.logo-spacing img, p{
+  margin-top: 24px;
+} 
+
+.logo-spacing p{
+  font-size: 20px;
+}
+
 .content-container{
   padding: 60px 20px;
   background-color: white;
@@ -444,9 +453,6 @@ ul .dropdown-menu a:hover{
   margin-top: 20px;
 }
 
-document.querySelector('#destinationsDropdown').addEventListener('click', function (e) {
-  e.stopPropagation();  // Prevents the dropdown from closing on click
-});
 
 @media(max-width:900px){
   
@@ -466,11 +472,6 @@ document.querySelector('#destinationsDropdown').addEventListener('click', functi
     margin: 5px;
   }
   
-  nav a{
-    font-size: 12px;
-    margin: 10px;
-  }
-
 
   p{
     font-size: 16px;
@@ -539,7 +540,12 @@ document.querySelector('#destinationsDropdown').addEventListener('click', functi
   }
 
   .nav {
-    font-size: 12px;
+    font-size: 14px;
+    gap:10px
+  }
+
+  .nav a{
+    font-size: 14px;
   }
 
   .dropdown-menu {
@@ -547,8 +553,23 @@ document.querySelector('#destinationsDropdown').addEventListener('click', functi
     float: none;
   }
 
-  ul li{
+  /* ul li{
     font-size: 8px;
+  } */
+
+  a.dropdown-item{
+    font-size: 10px;
   }
+
+  .dropdown-menu {
+    padding: 5px 10px; 
+    min-width: 120px;
+  }
+
+  .dropdown-menu .dropdown-item {
+    padding: 5px 10px; 
+  }
+
+  
 }
 
