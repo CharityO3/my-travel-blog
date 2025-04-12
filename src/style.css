@@ -350,6 +350,18 @@ ul .dropdown-menu a:hover{
   margin-top: 0; 
 }
 
+.nav-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  z-index: 1050;
+}
+
 
 .grid-3-images img {
   width: 100%;
@@ -570,6 +582,12 @@ ul .dropdown-menu a:hover{
     padding: 5px 10px; 
   }
 
-  
+  .nav-container nav {
+    align-items: flex-start;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static; 
+  }
 }
 

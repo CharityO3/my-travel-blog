@@ -19,5 +19,5 @@ const timer = setInterval(() => {
 }, 1000);
 
 document.querySelector('#destinationsDropdown').addEventListener('click', function (e) {
-  e.stopPropagation();  // Prevents the dropdown from closing on click
+  e.stopPropagation();  
 });
