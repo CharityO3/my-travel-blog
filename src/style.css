@@ -355,11 +355,18 @@ ul .dropdown-menu a:hover{
   z-index: 1000;
 }
 
-.navbar-nav .dropdown-menu {
+.nav .dropdown-menu {
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   z-index: 1050;
+  min-width: 150px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.nav-item.dropdown {
+  position: relative;
 }
 
 
@@ -586,8 +593,13 @@ ul .dropdown-menu a:hover{
     align-items: flex-start;
   }
 
-  .navbar-nav .dropdown-menu {
-    position: static; 
+  .nav .dropdown-menu {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .dropdown-menu .dropdown-item {
+    padding: 5px 10px;
   }
 }
 
