@@ -18,6 +18,12 @@ const timer = setInterval(() => {
   }
 }, 1000);
 
-document.querySelector('#destinationsDropdown').addEventListener('click', function (e) {
-  e.stopPropagation();  
+document.addEventListener("DOMContentLoaded", function () {
+  const destinationsLink = document.getElementById("destinationsDropdown");
+
+  destinationsLink.addEventListener("click", function (event) {
+    if (destinationsLink.getAttribute("aria-expanded") === "true") {
+      window.location.href = "/destinations.html";
+    }
+  });
 });
