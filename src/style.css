@@ -398,6 +398,9 @@ ul .dropdown-menu a:hover{
   height: 150px;
 }
 
+.grid-2-images img{
+  height: 300px;
+}
 
 /* .grid-2-img img{
   grid-column: span 2;
@@ -487,6 +490,24 @@ ul .dropdown-menu a:hover{
 }
 
 
+.dropdown-submenu .dropdown-submenu-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  z-index: 1000;
+  min-width: 180px;
+
+}
+
+.dropdown-submenu:hover .dropdown-submenu-menu {
+  display: block;
+}
+
+
+
 @media(max-width:900px){
   
   header h1 {
@@ -546,14 +567,9 @@ ul .dropdown-menu a:hover{
   footer .portfolio-links a{
     text-align: center;
     margin: 10px;
-  }
-
-  footer .portfolio-links a{
-    margin: 10px;
     padding: 5px 7px;
     font-size: 14px;
   }
-
   
   .web-message{
     padding-top: 150px;
