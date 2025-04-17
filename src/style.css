@@ -489,22 +489,26 @@ ul .dropdown-menu a:hover{
   margin-top: 20px;
 }
 
+/* Style for submenu */
 
-.dropdown-submenu .dropdown-submenu-menu {
-  display: none;
-  position: absolute;
+
+.dropdown-submenu .dropdown-menu {
   top: 0;
   left: 100%;
   margin-top: 0;
   margin-left: 0;
-  z-index: 1000;
+  display: none;
+  position: absolute;
   min-width: 180px;
-
+  z-index: 1000;
 }
 
-.dropdown-submenu:hover .dropdown-submenu-menu {
+/* Show submenu only when hovering Africa */
+.dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
+
+
 
 
 
