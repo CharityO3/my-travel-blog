@@ -171,10 +171,10 @@ header ul li ul li ul{
 
 .down-arrow {
   display: inline-block;
-  transform: translateY(1px);
-  font-size: 28px;
-  font-weight: 700;
-  margin-left: 4px;
+  font-size: 9px;
+  margin-left: 6px;
+  font-weight: 800;
+  margin-top: 9px;
 }
 
 .social-links {
@@ -519,6 +519,8 @@ header ul li ul li ul{
 
   header ul li ul{
     background-color: grey; 
+    max-height: 300px;
+    overflow-y: auto;
   }
 
   header nav ul li ul{
@@ -535,6 +537,7 @@ header ul li ul li ul{
   header nav ul li:hover ul li{
     background-color: #D3CCE3;
   }
+
 
   .menu-toggle{
     position: relative;
