@@ -14,31 +14,52 @@
   <title>My Travel Blog</title>
 </head>
 <body>
-  <div class="container nav-container fixed-top">
-    <nav class="d-flex justify-content-around">
-      <div class="d-flex gap-2 logo-spacing">
-        <a href="/" title="Homepage">
-          <img src="images/travel-diary.png" class="logo d-none d-sm-block" alt="Travel Logo">
-        </a>
-        <p class="d-none d-sm-block">GlobeScribe</p>
+  <header class="fixed-top">
+    <div class="logo-spacing">
+      <div class="logo-text">
+        <a><img src="images/travel-diary.png" class="logo" alt="Travel Logo"></a>
+        <p>GlobeScribe</p>
       </div>
-      <ul class="nav">
-        <li><a href="/" title="Homepage">HOME</a></li>
-        <li> <a href="/blog.html" title="My blog"> BLOG</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/destinations.html" id="destinationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            DESTINATIONS
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="destinationsDropdown">
-            <li><a class="dropdown-item" href="/destinations.html">AFRICA</a></li>
-            <li><a class="dropdown-item" href="/destinations.html">EUROPE</a></li>
-            <li><a class="dropdown-item" href="/destinations.html">ASIA</a></li>
+    </div> 
+    <div class="menu-toggle" id="menuToggle"></div>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li>
+          <a href="#">DESTINATIONS <b class="down-arrow">🢓</b></a>
+          <ul>
+            <li>
+              <a href="#">🌍 AFRICA <b>›</b></a>
+              <ul>
+                <li><a href="#">🇳🇬 NIGERIA</a></li>
+                <li><a href="#">🇪🇬 EGYPT</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">🌍 EUROPE <b>›</b></a>
+              <ul>
+                <li><a href="#">🇩🇪 GERMANY</a></li>
+                <li><a href="#">🇭🇺 HUNGARY</a></li>
+                <li><a href="#">🇬🇧 UNITED KINGDOM</a></li>
+                <li><a href="#">🇪🇪 ESTONIA</a></li>
+                <li><a href="#">🇫🇮 FINLAND</a></li>
+                <li><a href="#">🇭🇷 CROATIA</a></li>
+                <li><a href="#">🇲🇪 MONTENEGRO</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">🌍 ASIA <b>›</b></a>
+              <ul>
+                <li><a href="#">🇹🇭 THAILAND</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li class="active"> <a href="/contacts.html" title="Contact Info">CONTACT</a></li>
+        <li><a href="/contacts.html">CONTACT</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
   
   <div class="content-container web-message">
     <h1>🚧 Coming Soon</h1>
