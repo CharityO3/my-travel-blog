@@ -461,9 +461,20 @@ header ul li ul li ul{
 }
 
 
-
 @media(max-width:900px){
   
+  .sub-menu-toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #f0f0f0;
+  }
+  
+  .sub-menu-toggle.open {
+    max-height: 500px; /* Big enough to show the full submenu */
+  }
+  
+
   header h1 {
     font-size: 40px;
   }
@@ -537,7 +548,7 @@ header ul li ul li ul{
   header nav ul li:hover ul li{
     background-color: #D3CCE3;
   }
-
+  
 
   .menu-toggle{
     position: relative;

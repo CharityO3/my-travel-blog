@@ -18,18 +18,29 @@ const timer = setInterval(() => {
   }
 }, 1000);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const destinationsLink = document.getElementById("destinationsDropdown");
-
-  destinationsLink.addEventListener("click", function (event) {
-    if (destinationsLink.getAttribute("aria-expanded") === "true") {
-      window.location.href = "/destinations.html";
-    }
-  });
-});
 
 let menuToggle = document.querySelector('.menu-toggle');
 let header = document.querySelector('header');
 menuToggle.onclick = function(){
   header.classList.toggle('active');
 }
+
+
+document.querySelectorAll('.sub-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    event.stopPropagation(); 
+
+    const submenu = this.closest('li').querySelector('.sub-menu-toggle');
+    submenu.classList.toggle('open');
+  });
+});
+
+
+
+
+
+
+
+
+
