@@ -38,8 +38,6 @@ document.querySelectorAll('.sub-toggle').forEach(toggle => {
 
 
 
-
-
 window.addEventListener('load', function() {
   const chatbotPopup = document.createElement('div');
   chatbotPopup.className = 'chatbot-popup';
@@ -85,8 +83,8 @@ window.addEventListener('load', function() {
       z-index: 9999;
     }
     .chatbot-header {
-      background: #ff8a65;
-      color: #6D6D6D;
+      background: rgba(255, 138, 101, 0.6);
+      color: #F8F8FF;
       padding: 8px 12px;
       font-weight: bold;
       display: flex;
@@ -107,11 +105,11 @@ window.addEventListener('load', function() {
     }
     .chatbot-body p {
       margin: 0 0 8px 0;
-      font-size: 14px;
+      font-size: 12px;
       color: #333;
     }
     .chatbot-link {
-      font-size: 14px;
+      font-size: 13px;
       color: #007BFF;
       text-decoration: none;
       font-weight: bold;
@@ -121,7 +119,6 @@ window.addEventListener('load', function() {
       
     }
 
-    /* Desktop (bigger screens) */
     @media (min-width: 577px) {
       .chatbot-popup {
         position: fixed;
@@ -130,7 +127,6 @@ window.addEventListener('load', function() {
       }
     }
 
-    /* Mobile (576px and below) */
     @media (max-width: 576px) {
       .chatbot-popup {
         position: relative;
