@@ -471,7 +471,7 @@ header ul li ul li ul{
   }
   
   .sub-menu-toggle.open {
-    max-height: 500px; /* Big enough to show the full submenu */
+    max-height: 500px; 
   }
   
 
