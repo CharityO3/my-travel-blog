@@ -40,6 +40,120 @@ document.querySelectorAll('.sub-toggle').forEach(toggle => {
 
 
 
+window.addEventListener('load', function() {
+  const chatbotPopup = document.createElement('div');
+  chatbotPopup.className = 'chatbot-popup';
+  chatbotPopup.innerHTML = `
+    <div class="chatbot-header">
+      <span>🧳TravelBot ✈️</span>
+      <button class="chatbot-close">&times;</button>
+    </div>
+    <div class="chatbot-body">
+      <p>Need a travel itinerary?</p>
+      <a href="https://my-ai-travel-itinerary-generator.netlify.app" target="_blank" class="chatbot-link">Click here to get it instantly!</a>
+    </div>
+  `;
+
+  const footer = document.querySelector('footer');
+  if (footer) {
+    footer.parentNode.insertBefore(chatbotPopup, footer);
+  } else {
+    document.body.appendChild(chatbotPopup);
+  }
+
+  document.querySelector('.chatbot-close').addEventListener('click', function(e) {
+    e.stopPropagation();
+    chatbotPopup.style.display = 'none';
+  });
+
+  const styleSheet = document.createElement("style");
+  styleSheet.type = "text/css";
+  styleSheet.innerText = `
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .chatbot-popup {
+      background: rgba(255, 255, 255, 0.01);;
+      border: 1px solid #fff;
+      border-radius: 15px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      width: 250px;
+      animation: slideIn 0.5s ease-out;
+      z-index: 9999;
+    }
+    .chatbot-header {
+      background: #ff8a65;
+      color: #6D6D6D;
+      padding: 8px 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+    .chatbot-close {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .chatbot-body {
+      padding: 12px;
+      text-align: center;
+    }
+    .chatbot-body p {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .chatbot-link {
+      font-size: 14px;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .chatbot-link:hover {
+      text-decoration: underline;
+      
+    }
+
+    /* Desktop (bigger screens) */
+    @media (min-width: 577px) {
+      .chatbot-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    /* Mobile (576px and below) */
+    @media (max-width: 576px) {
+      .chatbot-popup {
+        position: relative;
+        width: 90%;
+        max-width: 250px;
+        margin: 20px auto;
+        padding: 8px;
+        font-size: 12px;
+      }
+      .chatbot-header {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+      .chatbot-body p, .chatbot-link {
+        font-size: 12px;
+      }
+      .chatbot-close {
+        font-size: 16px;
+      }
+    }
+  `;
+  document.head.appendChild(styleSheet);
+});
 
 
 

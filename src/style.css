@@ -27,50 +27,6 @@ h5::after {
   transform: translateX(-50%); 
 }
 
-footer .social-links a{
-  text-decoration:none;
-  margin: 0 20px;
-  color: #eee;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all 0.6s ease-in-out;
-}
-
-footer .social-links a:hover {
-  color: white; 
-  opacity: 1;   
-}
-
-footer .portfolio-links a{
-  margin: 20px;
-  color: white;
-  background-color: #6D6D6D;
-  padding: 10px 14px;
-  font-size: 18px;
-  border-radius: 50%;
-  transition: all 150ms ease-in-out;
-}
-
-footer .portfolio-links a:hover{
-  color: white;
-  background-color: #272044;
-}
-
-footer{
-  padding: 2px; 
-  background-color: #111111;
-  margin-top: 80px;
-}
-
-footer p{
-  font-size: 14px;
-  color: grey;
-}
-
-footer a{
-  text-decoration: none;
-}
-
 
 nav{
   margin-right: 120px;
@@ -140,6 +96,50 @@ header ul li ul li{
 header ul li ul li ul{
   top:0;
   left: 200px;
+}
+
+footer .social-links a{
+  text-decoration:none;
+  margin: 0 20px;
+  color: #eee;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: white; 
+  opacity: 1;   
+}
+
+footer .portfolio-links a{
+  margin: 20px;
+  color: white;
+  background-color: #6D6D6D;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 150ms ease-in-out;
+}
+
+footer .portfolio-links a:hover{
+  color: white;
+  background-color: #272044;
+}
+
+footer{
+  padding: 2px; 
+  background-color: #111111;
+  margin-top: 80px;
+}
+
+footer p{
+  font-size: 14px;
+  color: grey;
+}
+
+footer a{
+  text-decoration: none;
 }
 
 .logo-spacing{
@@ -298,7 +298,7 @@ header ul li ul li ul{
 
 .discover-more:hover{
   background-color: grey;
- color: white;
+  color: white;
 }
 
 .blog-btn{
@@ -459,7 +459,6 @@ header ul li ul li ul{
   font-size: 2rem;
   margin-top: 20px;
 }
-
 
 @media(max-width:900px){
   
