@@ -83,7 +83,7 @@ window.addEventListener('load', function() {
       z-index: 9999;
     }
     .chatbot-header {
-      background: rgba(255, 138, 101, 0.6);
+      background: rgba(0, 123, 255, 0.6);
       color: #F8F8FF;
       padding: 8px 12px;
       font-weight: bold;
@@ -151,6 +151,32 @@ window.addEventListener('load', function() {
   document.head.appendChild(styleSheet);
 });
 
+
+
+
+const slides = document.querySelectorAll('.hero-slider .slides img');
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+  current = (current === 0) ? slides.length - 1 : current - 1;
+  showSlide(current);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+  current = (current === slides.length - 1) ? 0 : current + 1;
+  showSlide(current);
+});
+
+setInterval(() => {
+  document.querySelector('.next').click();
+}, 5000);
 
 
 
