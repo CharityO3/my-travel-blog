@@ -620,6 +620,10 @@ footer a{
   .sub-menu-toggle.open {
     max-height: 500px; 
   }
+
+  b{
+    font-size: 22px;
+  }
   
 
   header h1 {
