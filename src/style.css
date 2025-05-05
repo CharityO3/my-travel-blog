@@ -685,9 +685,6 @@ footer a{
     position: relative;
     width: 100%;
     left: 0;
-    max-height: 100px; 
-    overflow-y: auto;
-    overflow-x: hidden;
   }
 
   header ul li ul li ul{
@@ -698,7 +695,13 @@ footer a{
   header nav ul li:hover ul li{
     background-color: #D3CCE3;
   }
-  
+
+  header ul li ul li{
+    max-height: 300px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
 
   .menu-toggle{
     position: relative;
