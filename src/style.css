@@ -266,7 +266,7 @@ footer a{
 
 .hero-slider .content h1, .hero-slider .content h2 {
   color: #f2f2f2;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-slider .content h1{
@@ -538,20 +538,24 @@ footer a{
   font-family: 'Poppins', sans-serif;
 }
 
-.hero-slider .slides img{
+.hero-slider .slides img {
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
-  display: none;
-  transition: opacity 1s ease-in-out;
-
+  transform: scale(1.1);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  z-index: 0;
 }
 
 .hero-slider .slides img.active {
+  opacity: 1;
+  transform: scale(1);
   display: block;
   position: relative;
-  opacity: 1;
   z-index: 1;
 }
 
@@ -599,12 +603,39 @@ footer a{
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 120px;
+  height: 200px;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
   z-index: 2;
   pointer-events: none;
 }
+
+.gradient-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.slides img {
+  position: relative;
+  z-index: 0;
+}
+
+.wave-divider {
+  aspect-ratio: 960/300;
+  background: no-repeat center;
+  background-size: cover;
+  height: 150px;
+  z-index: 3;
+  position: relative;
+
+}
+
+.berlin-wave{
+  background-image: url("../images/stacked-waves-haikei.svg");
+  width: 100%;
+}
+
 
 
 

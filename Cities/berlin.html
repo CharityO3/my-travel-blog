@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="../src/style.css">
   <script src="https://kit.fontawesome.com/372ecb14c4.js" crossorigin="anonymous"></script>
   <title>Berlin-travel-guide</title>
 </head>
@@ -18,7 +18,7 @@
   <header class="fixed-top">
     <div class="logo-spacing">
       <div class="logo-text">
-        <a><img src="images/travel-diary.png" class="logo" alt="Travel Logo"></a>
+        <a><img src="../images/travel-diary.png" class="logo" alt="Travel Logo"></a>
         <p>GlobeScribe</p>
       </div>
     </div> 
@@ -52,7 +52,7 @@
               <ul class="sub-menu-toggle">
                 <li><a href="#">🇩🇪 GERMANY <b class="sub-toggle">›</b></a>
                   <ul class="sub-menu-toggle">
-                    <li><a href="/berlin.html">BERLIN</a></li>
+                    <li><a href="../Cities/berlin.html">BERLIN</a></li>
                     <li><a href="#">LEIPZIG</a></li>
                     <li><a href="#">DÜSSELDORF</a></li>
                   </ul>
@@ -127,18 +127,21 @@
   <main>
     <div class="hero-slider d-none d-sm-block">
       <div class="slides">
-        <img src="images/berlin-image1.jpg"  class="active" alt="Slide 1">
-        <img src="images/berlin-image2.jpg" alt="Slide 2">
-      </div>
-      <div class="content">
-        <h1>
-          BERLIN TRAVEL GUIDE
-        </h1>
-        <h2>Tips for how to explore the land of walls, wonders, and wild nights.</h2>
-      </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div> 
+        <img src="../images/berlin-image1.jpg"  class="active" alt="Slide 1">
+        <img src="../images/berlin-image2.jpg" alt="Slide 2">
+        <div class="gradient-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="content">
+          <h1>
+            BERLIN TRAVEL GUIDE
+          </h1>
+          <h2>Tips for how to explore the land of walls, wonders, and wild nights.</h2>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div> 
+    </div>
+    <div class="wave-divider berlin-wave">
+    </div>
     <div class="container city-container">
       <div class="row">
         <div class="col-lg-8">
@@ -207,7 +210,7 @@
           <div class="about-me-container">
             <div class="card" style="width: 22rem;">
               <p class="about-card text-muted">ABOUT ME</p>
-              <img src="images/about-me.jpg" alt="">
+              <img src="../images/about-me.jpg" alt="">
               <div class="card-body">
                 <p class="card-text">Hey there! I'm Charity, a Nigerian who has been traveling for a couple of years now.
                   <br />
@@ -237,6 +240,6 @@
   </footer>
   
 
-  <script src="src/script.js"></script>
+  <script src="../src/script.js"></script>
 
 </body>  
