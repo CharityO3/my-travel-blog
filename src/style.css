@@ -608,7 +608,7 @@ footer a{
 
 
 
-@media(max-width:900px){
+@media(max-width:1024px){
   
   .sub-menu-toggle {
     max-height: 0;
@@ -685,6 +685,9 @@ footer a{
     position: relative;
     width: 100%;
     left: 0;
+    max-height: 100px; 
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   header ul li ul li ul{
