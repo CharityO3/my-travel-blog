@@ -327,8 +327,30 @@ footer a{
 }
 
 .city-quick-facts{
-  font-size: 14px;
-  background-color:  #F8F8FF !important;
+  background-color:  #F8F8FF !important; 
+}
+
+.city-data{
+  display: flex;
+  margin-bottom: 10px;
+
+}
+
+.city-detail{
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  display: block;
+  font-size: 16px !important;
+}
+
+.city-quick-facts p{
+  font-size: 13px;
+  line-height: 2;
+}
+
+.city-quick-facts a{
+  color: #ff8a65;
+  text-decoration: none;
 }
 
 .card-body{
@@ -354,12 +376,14 @@ footer a{
 }
 
 .card img{
-  border-radius: 60%;
-  max-width: 80%;
-  margin: 0 auto;
-  height: 80%;
-  width: 200px;
+  border-radius: 50%;
+  width: 300px;
+  margin: 0 0 0 20px;
+  display: block;
+  height: 300px;
   box-shadow: #000;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .content h1{
@@ -678,6 +702,27 @@ footer a{
   width: 100%;
 }
 
+.fa-solid{
+  color: #ff8a65 !important;
+  background-color: #DEE2EA;
+  padding: 10px !important;
+  border-radius: 50% !important;
+  margin: 0 20px 0 0;
+  transition: all 150ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  
+}
+
+.fa-solid:hover{
+  background-color: #ff8a65;
+  opacity: 1;   
+  color: white !important;
+}
+
 
 @media(max-width:1024px){
   
@@ -863,17 +908,18 @@ footer a{
     margin-left: 10px;
   }
 
- 
+  
 }
 
 @media(max-width:800px){
-
+  
   .city-container{
     margin-top: 100px;
   }
-
+  
   .card{
     margin-top: 20px;
   }
 
+  
 }
