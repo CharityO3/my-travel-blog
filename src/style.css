@@ -702,7 +702,7 @@ footer a{
   width: 100%;
 }
 
-.fa-solid{
+.city-data-icon{
   color: #ff8a65 !important;
   background-color: #DEE2EA;
   padding: 10px !important;
@@ -717,7 +717,7 @@ footer a{
   
 }
 
-.fa-solid:hover{
+.city-data-icon:hover{
   background-color: #ff8a65;
   opacity: 1;   
   color: white !important;
@@ -920,6 +920,5 @@ footer a{
   .card{
     margin-top: 20px;
   }
-
   
 }
