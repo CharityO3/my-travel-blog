@@ -30,6 +30,7 @@ h5::after {
 
 nav{
   margin-right: 120px;
+  text-transform: uppercase;
 }
 
 header{
@@ -87,7 +88,7 @@ header ul li ul{
 header ul ul a{
   font-size: 14px;
   font-weight: 500;
-  padding: 10px 15px;
+  padding: 8px 13px;
 
 }
 
@@ -333,7 +334,6 @@ footer a{
 .city-data{
   display: flex;
   margin-bottom: 10px;
-
 }
 
 .city-detail{
@@ -355,13 +355,31 @@ footer a{
 
 .card-body{
   font-size: 17px;
+  background-color: #F8F8FF !important;
 }
 
-.about-card{
+.social-info{
+  display: flex;
+  font-weight: bold;
+  margin: 0 40px 20px 0;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  text-align: left;
+}
+
+.social-info a{
+  text-decoration: none;
+}
+
+
+.card-info{
+  font-size: 14px;
+  text-transform: uppercase;
   margin: 10px 10px 8px;
   font-weight: 700;
   border-bottom: 3px solid #eeeeee;
+  font-family: "Open Sans", sans-serif;
   border-image: linear-gradient(to right, orange 15%, #eeeeee 3%) 1;
 }
 
@@ -702,7 +720,7 @@ footer a{
   width: 100%;
 }
 
-.city-data-icon{
+.customized-data-icon{
   color: #ff8a65 !important;
   background-color: #DEE2EA;
   padding: 10px !important;
@@ -710,14 +728,20 @@ footer a{
   margin: 0 20px 0 0;
   transition: all 150ms ease-in-out;
   display: flex !important;
+  font-size: 16px;
   align-items: center;
   justify-content: center !important;
   width: 40px;
   height: 40px;
-  
 }
 
-.city-data-icon:hover{
+.city-data:hover .customized-data-icon{
+  background-color: #ff8a65;
+  opacity: 1;   
+  color: white !important;
+}
+
+.social-info:hover .customized-data-icon{
   background-color: #ff8a65;
   opacity: 1;   
   color: white !important;
