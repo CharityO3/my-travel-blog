@@ -368,6 +368,16 @@ footer a{
   text-align: left;
 }
 
+.blog-post-img img{
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.card-text img{
+  padding: 5px;
+  object-fit: cover;
+}
+
 .social-info a{
   text-decoration: none;
 }
