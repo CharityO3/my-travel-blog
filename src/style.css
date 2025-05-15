@@ -765,10 +765,16 @@ footer a{
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     background: #f0f0f0;
+  
   }
   
   .sub-menu-toggle.open {
     max-height: 500px; 
+  }
+
+  nav ul, .sub-menu-toggle {
+    max-height: auto;
+    overflow-y: auto;
   }
 
   b{
@@ -833,11 +839,6 @@ footer a{
   header ul li ul{
     background-color: grey; 
     max-height: 300px;
-    overflow-y: auto;
-  }
-
-  .sub-menu-toggle {
-    max-height: auto;
     overflow-y: auto;
   }
 
