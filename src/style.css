@@ -827,9 +827,9 @@ footer a{
 
   header nav ul li{
     width: 100%;
-    /* max-height: 300px; 
+    max-height: 300px; 
     overflow-y: auto;
-    overflow-x: hidden; */
+    overflow-x: hidden;
   }
 
   header ul li ul{
