@@ -803,6 +803,7 @@ footer a{
     top: 82px;
     background-color: #F9F7FE;
     display: none;
+    max-height: 100vh;
   }
 
   header.active nav{
@@ -827,14 +828,16 @@ footer a{
 
   header nav ul li{
     width: 100%;
-    max-height: 300px; 
-    overflow-y: auto;
-    overflow-x: hidden;
   }
 
   header ul li ul{
     background-color: grey; 
     max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .sub-menu-toggle {
+    max-height: auto;
     overflow-y: auto;
   }
 
@@ -854,9 +857,10 @@ footer a{
   }
 
   header ul li ul li{
-    max-height: 300px; 
+    max-height:300px; 
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 1000;
   }
 
 
