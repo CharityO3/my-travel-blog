@@ -72,7 +72,7 @@ window.addEventListener('load', function() {
       to { transform: translateX(0); opacity: 1; }
     }
     .chatbot-popup {
-      background: rgba(255, 255, 255, 0.01);;
+      background: rgba(255, 255, 255, 0.01);
       border: 1px solid #fff;
       border-radius: 15px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
