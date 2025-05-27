@@ -80,7 +80,7 @@ window.addEventListener('load', function() {
       overflow: hidden;
       width: 250px;
       animation: slideIn 0.5s ease-out;
-      z-index: 9999;
+      z-index: 1000;
     }
     .chatbot-header {
       background: rgba(0, 123, 255, 0.6);

@@ -102,7 +102,7 @@ header ul li ul{
 header ul ul a{
   font-size: 14px;
   font-weight: 500;
-  padding: 8px 13px;
+  padding: 8px 12px;
 
 }
 
@@ -777,7 +777,6 @@ footer a{
   opacity: 1;   
   color: white !important;
 }
-
 
 @media(max-width:1024px){
   
