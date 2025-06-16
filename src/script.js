@@ -179,4 +179,46 @@ setInterval(() => {
 }, 5000);
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // 💥 This prevents the default redirect
+
+    const formData = new FormData(form);
+    const name = formData.get("name");
+
+    status.innerHTML = "Sending...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        status.innerHTML = `
+          <p>Hello <strong>${name}</strong>, thank you for your message. I will respond as quick as possible.</p>
+          <button id="back-button">Go back to form</button>
+        `;
+
+        document.getElementById("back-button").addEventListener("click", () => {
+          location.reload(); // reloads the form
+        });
+      } else {
+        status.textContent = "Oops! There was a problem submitting the form.";
+      }
+    } catch (error) {
+      status.textContent = "Network error. Please try again.";
+    }
+  });
+});
+
 
