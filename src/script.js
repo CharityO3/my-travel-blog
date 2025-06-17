@@ -181,32 +181,37 @@ setInterval(() => {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
-  const greeting = document.getElementById("greeting");
-
-  const name = sessionStorage.getItem("contactName");
-  if (greeting && name) {
-    greeting.textContent = `Thank you ${name} for your message!`;
-  }
-
   if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); 
+    form.addEventListener("submit", () => {
       const nameInput = document.getElementById("name");
-      if (nameInput && nameInput.value) {
-        sessionStorage.setItem("contactName", nameInput.value);
+      if (nameInput && nameInput.value.trim()) {
+        sessionStorage.setItem("contactName", nameInput.value.trim());
       }
-      window.location.href = "message.html";
     });
   }
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const greeting = document.getElementById("greeting");
+  const name = sessionStorage.getItem("contactName");
+
+  if (greeting) {
+    greeting.textContent = name
+      ? `Thank you ${name}`
+      : "Thank you!";
+  }
+});
+
 function goBack() {
+  sessionStorage.removeItem("contactName"); 
   window.location.href = "contacts.html";
 }
 window.goBack = goBack;
+
+
 
 
 
