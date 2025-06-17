@@ -179,29 +179,36 @@ setInterval(() => {
 }, 5000);
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
   const greeting = document.getElementById("greeting");
-  const form = document.querySelector("form[name='contact']");
 
   const name = sessionStorage.getItem("contactName");
   if (greeting && name) {
-    greeting.textContent = `Hello ${name}, thank you for your message!`;
+    greeting.textContent = `Thank you ${name} for your message!`;
   }
 
   if (form) {
-    form.addEventListener("submit", () => {
-      const nameInput = form.querySelector("input[name='name']");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); 
+      const nameInput = document.getElementById("name");
       if (nameInput && nameInput.value) {
         sessionStorage.setItem("contactName", nameInput.value);
       }
+      window.location.href = "../message.html";
     });
   }
 });
 
 function goBack() {
-  window.location.href = "/contacts.html";
+  window.location.href = "../contacts.html";
 }
 window.goBack = goBack;
+
+
 
 
 
