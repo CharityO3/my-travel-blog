@@ -198,13 +198,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (nameInput && nameInput.value) {
         sessionStorage.setItem("contactName", nameInput.value);
       }
-      window.location.href = "../message.html";
+      window.location.href = "message.html";
     });
   }
 });
 
 function goBack() {
-  window.location.href = "../contacts.html";
+  window.location.href = "contacts.html";
 }
 window.goBack = goBack;
 
