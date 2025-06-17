@@ -186,10 +186,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!form) return;
 
   form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // 💥 This prevents the default redirect
+    event.preventDefault();
 
     const formData = new FormData(form);
-    const name = formData.get("name");
 
     status.innerHTML = "Sending...";
 
@@ -205,13 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         form.reset();
         status.innerHTML = `
-          <p>Hello <strong>${name}</strong>, thank you for your message. I will respond as quick as possible.</p>
-          <button id="back-button">Go back to form</button>
+          <p>Message sent successfully.</p>
+          <p>You will be redirected back shortly...</p>
         `;
 
-        document.getElementById("back-button").addEventListener("click", () => {
-          location.reload(); // reloads the form
-        });
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
       } else {
         status.textContent = "Oops! There was a problem submitting the form.";
       }
@@ -220,5 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
 
 
