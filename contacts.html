@@ -173,8 +173,10 @@
         I’m often on the go, but I do my best to reply to all messages!
       </p>
     
-      <form name="contact" method="POST" data-netlify="true" action="/message.html" id="contact-form">
+      <form name="contact" method="POST" data-netlify="true" id="contact-form">
         <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="redirect" value="/message.html" />
+        
         <div class="form-group">
           <label for="name">Your name</label>
           <input type="text" id="name" name="name" required />
@@ -193,7 +195,7 @@
         </div>
         <button type="submit">Submit</button>
         <p id="form-status"></p>
-      </form>      
+      </form>           
       <p class="form-info">This site is protected by reCAPTCHA, and the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</p>
     </div>  
   </main>

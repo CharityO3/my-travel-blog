@@ -181,30 +181,28 @@ setInterval(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const greeting = document.getElementById("greeting");
-  const name = sessionStorage.getItem("contactName");
+  const form = document.querySelector("form[name='contact']");
 
+  const name = sessionStorage.getItem("contactName");
   if (greeting && name) {
     greeting.textContent = `Hello ${name}, thank you for your message!`;
+  }
+
+  if (form) {
+    form.addEventListener("submit", () => {
+      const nameInput = form.querySelector("input[name='name']");
+      if (nameInput && nameInput.value) {
+        sessionStorage.setItem("contactName", nameInput.value);
+      }
+    });
   }
 });
 
 function goBack() {
   window.location.href = "/contacts.html";
 }
-
 window.goBack = goBack;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form[name='contact']");
-  if (!form) return;
-
-  form.addEventListener("submit", () => {
-    const nameInput = form.querySelector("input[name='name']");
-    if (nameInput && nameInput.value) {
-      sessionStorage.setItem("contactName", nameInput.value);
-    }
-  });
-});
 
 
 
