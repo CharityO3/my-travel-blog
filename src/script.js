@@ -180,45 +180,34 @@ setInterval(() => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
+  const greeting = document.getElementById("greeting");
+  const name = sessionStorage.getItem("contactName");
 
+  if (greeting && name) {
+    greeting.textContent = `Hello ${name}, thank you for your message!`;
+  }
+});
+
+function goBack() {
+  window.location.href = "/contacts.html";
+}
+
+window.goBack = goBack;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form[name='contact']");
   if (!form) return;
 
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-
-    status.innerHTML = "Sending...";
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json"
-        }
-      });
-
-      if (response.ok) {
-        form.reset();
-        status.innerHTML = `
-          <p>Message sent successfully.</p>
-          <p>You will be redirected back shortly...</p>
-        `;
-
-        setTimeout(() => {
-          location.reload();
-        }, 2000);
-      } else {
-        status.textContent = "Oops! There was a problem submitting the form.";
-      }
-    } catch (error) {
-      status.textContent = "Network error. Please try again.";
+  form.addEventListener("submit", () => {
+    const nameInput = form.querySelector("input[name='name']");
+    if (nameInput && nameInput.value) {
+      sessionStorage.setItem("contactName", nameInput.value);
     }
   });
 });
+
+
+
 
 
 

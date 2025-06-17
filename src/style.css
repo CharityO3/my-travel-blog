@@ -918,7 +918,44 @@ button[type="submit"]:hover {
   color: #ff8a65;
 }
 
+.message-info {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
 
+.thank-you-message {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.thank-you-message h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.thank-you-message p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.thank-you-message button {
+  margin-top: 2rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.thank-you-message button:hover {
+  background-color: #0056b3;
+}
 
 @media(max-width:1024px){
   
