@@ -277,6 +277,7 @@ footer a{
 
 .contact-container{
   max-width: 800px;
+  text-align: center;
 }
 
 .hero-slider .content.contact-content h1{
@@ -309,7 +310,7 @@ footer a{
   position: relative;
 }
 
-.contact-container p{
+.contact-container  p{
   font-family: "Lato", sans-serif;
   text-align: center;
   margin: 17px 0;
@@ -708,7 +709,7 @@ footer a{
 .hero-slider {
   position: relative;
   width: 100%;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow: hidden;
   padding: 0 0 60px 0;
   font-family: 'Poppins', sans-serif;
@@ -903,7 +904,7 @@ button[type="submit"]:hover {
   color: green;
 }
 
-.form-info{
+.contact-container .form-info{
   text-align: center;
   font-size: 14px;
   font-family: "Lato", sans-serif;
@@ -1101,18 +1102,60 @@ button[type="submit"]:hover {
     display: block;
     margin: 0 auto;
   }
+  .contact-container{
+    display: block;
+    margin: 0 auto;
+  }
 
   .card{
     margin-top: 20px;
     margin-left: 10px;
   }
 
+  .contact-container h4{
+   font-size: 15px;
+  }
+  .contact-container h3{
+   font-size: 20px;
+  }
   
+  .contact-container  p{   
+    margin: 12px 10px;
+    font-size: 15px;
+  }
+  
+  .contact-container h4::before,
+  .contact-container h4::after {  
+    width: 60px;
+    height: 2px;
+  }
+  
+  .contact-container h4::before {
+    left: 60px;
+  }
+  
+  .contact-container h4::after {
+    right: 60px;
+  }
+
+  form {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .contact-container .form-info{
+    font-size: 10px;
+    margin-top: 10px;
+  }
 }
 
 @media(max-width:800px){
   
   .city-container{
+    margin-top: 100px;
+  }
+
+  .contact-container{
     margin-top: 100px;
   }
   
