@@ -962,18 +962,17 @@ button[type="submit"]:hover {
   color: #ff8a65;
 }
 
-.g-recaptcha {
-  /* Center the widget horizontally */
-  margin: 0 auto;
-  
-  /* Optional: set max width and scale */
-  max-width: 152px;  /* default width of reCAPTCHA */
-  transform: scale(0.9); /* scale down if needed */
-  transform-origin: 0 0; /* keep scaling from top-left */
-  
-  /* Make sure it displays as a block to apply margins */
-  display: block;
+.recaptcha-wrapper {
+  text-align: center;      
+  margin: 20px 0;         
 }
+
+.g-recaptcha {
+  display: inline-block;   
+  transform: scale(0.50);  
+  transform-origin: 0 2;   
+}
+
 
 
 @media(max-width:1024px){
