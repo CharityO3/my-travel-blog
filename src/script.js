@@ -182,21 +182,18 @@ setInterval(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
+  if (!form) return;
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      const captchaResponse = grecaptcha.getResponse();
-
-      if (!captchaResponse || captchaResponse.length === 0) {
-        e.preventDefault();
-        alert("Please complete the reCAPTCHA before submitting.");
-        return false;
-      }
-
-      form.setAttribute("action", "/message.html");
-    });
-  }
+  form.addEventListener("submit", function (e) {
+    const recaptchaResponse = document.querySelector('textarea[name="g-recaptcha-response"]');
+    
+    if (!recaptchaResponse || recaptchaResponse.value.trim() === "") {
+      e.preventDefault();
+      alert("Please complete the reCAPTCHA before submitting.");
+    }
+  });
 });
+
 
 
 

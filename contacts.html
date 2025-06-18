@@ -173,7 +173,7 @@
         I’m often on the go, but I do my best to reply to all messages!
       </p>
     
-      <form name="contact" method="POST" data-netlify="true" action="/message.html" id="contact-form" data-netlify-recaptcha="true">
+      <form name="contact" method="POST" data-netlify="true" action="/message.html" id="contact-form" netlify-recaptcha>
         <input type="hidden" name="form-name" value="contact" />
         <div class="form-group">
           <label for="name">Your name</label>
@@ -192,7 +192,7 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         <div class="recaptcha-wrapper">
-          <div class="g-recaptcha" data-sitekey="6Lfxc2UrAAAAAM7Fj9htR7p8nVggwd-F8ftjC7sS"></div>
+          <div data-netlify-recaptcha="true"></div>
         </div>
         <button type="submit">Submit</button>
       </form>              
