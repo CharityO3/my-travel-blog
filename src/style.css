@@ -967,7 +967,7 @@ button[type="submit"]:hover {
   margin: 20px 0;         
 }
 
-.g-recaptcha {
+.netlify-recaptcha {
   display: inline-block;   
   transform: scale(0.50);  
   transform-origin: 0 2;   
