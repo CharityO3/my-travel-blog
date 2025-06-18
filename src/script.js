@@ -187,13 +187,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", function (e) {
       const captchaResponse = grecaptcha.getResponse();
-      if (captchaResponse.length === 0) {
-        e.preventDefault(); 
+
+      if (!captchaResponse || captchaResponse.length === 0) {
+        e.preventDefault();
         alert("Please complete the reCAPTCHA before submitting.");
+        return false;
       }
     });
   }
 });
+
 
 
 
