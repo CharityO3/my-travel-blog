@@ -177,19 +177,19 @@
         <input type="hidden" name="form-name" value="contact" />
         <div class="form-group">
           <label for="name">Your name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required autocomplete="name" />
         </div>
         <div class="form-group">
           <label for="email">Your email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required autocomplete="email" />
         </div>
         <div class="form-group">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" />
+          <input type="text" id="subject" name="subject" autocomplete="off" />
         </div>
         <div class="form-group">
           <label for="message">Your message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" required autocomplete="off"></textarea>
         </div>
         <div class="recaptcha-wrapper">
           <div data-netlify-recaptcha="true" class="netlify-recaptcha"></div>
