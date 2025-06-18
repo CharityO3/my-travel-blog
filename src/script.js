@@ -180,31 +180,36 @@ setInterval(() => {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
 
   if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); 
+
       const nameInput = document.getElementById("name");
       if (nameInput && nameInput.value.trim()) {
         sessionStorage.setItem("contactName", nameInput.value.trim());
       }
+
+      form.submit(); 
+      window.location.href = "message.html"; 
     });
   }
 
   const greeting = document.getElementById("greeting");
   if (greeting) {
     const name = sessionStorage.getItem("contactName");
-    greeting.textContent = name ? `Thank you ${name}` : "Thank you!";
+    greeting.innerHTML = name ? `Thank you <strong>${name}</strong>` : "Thank you!";
   }
 });
 
 function goBack() {
   sessionStorage.removeItem("contactName");
-  window.location.href = "contacts.html"; 
+  location.href = "contacts.html";
 }
 window.goBack = goBack;
+
 
 
 
