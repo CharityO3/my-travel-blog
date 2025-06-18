@@ -558,7 +558,14 @@ footer a{
   font-size: 12px;
   color: white;
   background-color: #272044; 
+  transition: all 0.3s ease;
+
 }
+
+.blog-btn:hover{
+  background-color: #322a55;
+}
+
 
 .read-more:hover {
  background-color: #272044;
@@ -941,20 +948,18 @@ button[type="submit"]:hover {
 
 .thank-you-message p {
   margin-top: 1rem;
-  font-size: 1.1rem;
+  font-size: 15px;
 }
 
-.thank-you-message button {
-  margin-top: 2rem;
-  padding: 0.6rem 1.5rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-.thank-you-message button:hover {
-  background-color: #0056b3;
+.thank-you-message a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #272044;
+  font-size: 12px;
+} 
+
+.thank-you-message a:hover{
+  color: #ff8a65;
 }
 
 @media(max-width:1024px){
