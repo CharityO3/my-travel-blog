@@ -186,7 +186,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form) {
     form.addEventListener("submit", function (e) {
-      form.setAttribute("action", "/message.html");
+      const captchaResponse = grecaptcha.getResponse();
+      if (captchaResponse.length === 0) {
+        e.preventDefault(); 
+        alert("Please complete the reCAPTCHA before submitting.");
+      }
     });
   }
 });
