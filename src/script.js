@@ -180,7 +180,6 @@ setInterval(() => {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
 
@@ -193,9 +192,13 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please complete the reCAPTCHA before submitting.");
         return false;
       }
+
+      form.setAttribute("action", "/message.html");
     });
   }
 });
+
+
 
 
 
