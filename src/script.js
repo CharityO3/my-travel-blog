@@ -183,33 +183,29 @@ setInterval(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
+
   if (form) {
-    form.addEventListener("submit", () => {
+    form.addEventListener("submit", function (e) {
       const nameInput = document.getElementById("name");
       if (nameInput && nameInput.value.trim()) {
         sessionStorage.setItem("contactName", nameInput.value.trim());
       }
     });
   }
-});
 
-
-document.addEventListener("DOMContentLoaded", () => {
   const greeting = document.getElementById("greeting");
-  const name = sessionStorage.getItem("contactName");
-
   if (greeting) {
-    greeting.textContent = name
-      ? `Thank you ${name}`
-      : "Thank you!";
+    const name = sessionStorage.getItem("contactName");
+    greeting.textContent = name ? `Thank you ${name}` : "Thank you!";
   }
 });
 
 function goBack() {
-  sessionStorage.removeItem("contactName"); 
-  window.location.href = "contacts.html";
+  sessionStorage.removeItem("contactName");
+  window.location.href = "contacts.html"; 
 }
 window.goBack = goBack;
+
 
 
 
