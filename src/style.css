@@ -504,6 +504,17 @@ footer a{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.my-info a{
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.my-info a:hover{
+  color: #ff8a65;
+  text-decoration: underline;
+}
+
 .content h1{
   font-weight: 600;
   font-size: 65px;
