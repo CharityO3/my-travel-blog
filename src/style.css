@@ -438,6 +438,11 @@ footer a{
   text-decoration: none;
 }
 
+.city-insights a{
+  color: #ff8a65;
+  text-decoration: none;
+}
+
 .card-body{
   font-size: 17px;
   background-color: #F8F8FF !important;
@@ -1198,7 +1203,7 @@ button[type="submit"]:hover {
 
   form {
     max-width: 350px;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   .contact-container .form-info{
