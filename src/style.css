@@ -993,6 +993,29 @@ button[type="submit"]:hover {
   transform-origin: 0 2;   
 }
 
+.instagram-row {
+  display: flex;
+  gap: 10px;
+}
+
+.ig-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ig-item .instagram-media {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.ig-item .instagram-media iframe {
+  transform: scale(0.9);
+  transform-origin: top left;
+  width: 111% !important;
+}
 
 
 @media(max-width:1024px){

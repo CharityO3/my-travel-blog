@@ -8,11 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/style.css">
   <script src="https://kit.fontawesome.com/372ecb14c4.js" crossorigin="anonymous"></script>
-  <title>My Travel Blog</title>
+  <title>London-travel-guide</title>
 </head>
-<body>
+<body class="blog-content">
   <header class="fixed-top">
     <div class="logo-spacing">
       <div class="logo-text">
@@ -141,8 +142,8 @@
                 </li>
                 <li><a href="#">🇨🇭 Switzerland <b class="sub-toggle">›</b></a>
                   <ul class="sub-menu-toggle">
-                    <li><a href="../Cities/bern.html">Bern</a></li>
                     <li><a href="../Cities/zurich.html">Zurich</a></li>
+                    <li><a href="../Cities/bern.html">Bern</a></li>
                   </ul>
                 </li>
                 <li><a href="#">🇬🇧 United Kingdom <b class="sub-toggle">›</b></a>
@@ -159,27 +160,288 @@
       </ul>
     </nav>
   </header>
-  
-  <div class="container content-container web-message">
-    <h1>🚧 Coming Soon</h1>
-    <p>We're working hard to launch this website. Stay tuned!  
-    <p id="countdown">Loading...</p></p>
-  </div>
+  <main>
+    <div class="hero-slider d-none d-sm-block">
+      <div class="slides">
+        <img src="../images/denmark-image-1.jpg"  class="active" alt="Slide 1">
+        <img src="../images/denmark-image-2.jpg" alt="Slide 2">
+        <div class="gradient-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="content">
+          <h1>
+            Copenhagen Travel Guide
+          </h1>
+          <h2>Tips on how to explore the land of fairy-tale spires, sea-scented harbors, and hygge-filled corners.</h2>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div> 
+    </div>
+    <div class="wave-divider berlin-wave">
+    </div>
+    <div class="container city-container">
+      <div class="row">
+        <div class="col-lg-8 g-5">
+          <h3>
+            Copenhagen Travel Guide
+          </h3>
+          <h4>
+            Overview
+          </h4>
+          <p class="mb-5 city-insights">
+            The charming capital of Denmark, Copenhagen is a city built around water. Its scenic canals, colorful harbors like <a href="https://www.visitcopenhagen.com/copenhagen/planning/nyhavn-gdk474735" target="_blank">Nyhavn</a>, and coastal setting make it one of the most liveable and picturesque cities in Europe. 
+            Known for its cycling culture, sustainability, and design-forward architecture, Copenhagen effortlessly blends tradition with modern innovation.
+            <br />
+            <br />
+            While the city doesn't have mountains, it offers lush parks, waterfront promenades, and clean beaches perfect for a summer dip.
+            <br />
+            No visit to Copenhagen is complete without seeing its iconic landmarks — from the <a href="https://www.visitcopenhagen.com/copenhagen/planning/little-mermaid-gdk586951" target="_blank">Little Mermaid statue</a>, to <a href="https://www.tivoli.dk/en" target="_blank">Tivoli Gardens</a>, and <a href="https://www.visitcopenhagen.com/copenhagen/planning/christiansborg-palace-gdk420896" target="_blank">Christiansborg Palace</a>. 
+            Trendy neighborhoods like Vesterbro and Nørrebro also offer great food, art, and culture.
+            <br />
+            <br />
+            Read through this complete Copenhagen travel guide for more info on what to expect!
+          </p>
+          <h4>
+            Quick Facts
+          </h4>
+          <div class="grid grid-2-columns city-quick-facts mt-3 mb-3">
+            <div>
+              <div class="city-data">
+                <div> 
+                  <span><i class="fa-solid fa-language customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Language</span>
+                  <p class="text-muted">Danish</p>
+                </div>
+              </div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-dollar-sign customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Currency</span>
+                  <p class="text-muted"><a href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=DKK" target="_blank">Danish Krone (DKK)</a></p>
+                </div>
+              </div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-passport customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Visa</span>
+                  <p class="text-muted"><a href="https://en.wikipedia.org/wiki/Visa_policy_of_the_Schengen_Area" target="_blank">Shengen Area</a> rules apply</p>
+                </div>
+              </div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-plug customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Power Plugs</span>
+                  <p class="text-muted"><a href="https://www.amazon.com/gp/product/B0BYRLPQL3?ie=UTF8&th=1&linkCode=sl1&tag=theworldtr062-20&linkId=832115a9ce0e8830c7576af987bedec5&language=en_US&ref_=as_li_ss_tl" target="_blank">Type C / F</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-place-of-worship customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Religion</span>
+                  <p class="text-muted">Christainity</p>
+                </div>
+              </div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-city customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Country</span>
+                  <p class="text-muted">Denmark</p>
+                </div>
+              </div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-cloud customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Climate</span>
+                  <p class="text-muted">Cool, breezy winters & mild, light-filled summers with occasional rain</p>
+                </div>
+              </div>
+              <div class="city-data">
+                <div>
+                  <span><i class="fa-solid fa-mobile-screen customized-data-icon"></i></span>
+                </div>
+                <div>
+                  <span class="city-detail">Apps</span>
+                  <p class="text-muted"><a href="https://www.publictransport.dk/app" target="_blank">DOT Mobilbilletter</a>, <em><a href="https://www.uber.com/global/en/r/cities/copenhagen-rh-dk/" target="_blank">Uber</a> & <a href="https://bolt.eu/en/cities/copenhagen/" target="_blank">Bolt</a> apps available</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="city-insights">
+            <h4>
+              Flights
+            </h4>
+            <p>
+              As a tourist visiting Copenhagen, your main entry point will be <a href="https://www.cph.dk/en" target="_blank">Copenhagen Airport (CPH)</a>, Denmark's largest and busiest airport. 
+              It offers excellent international connections and is just a 15-minute train or metro ride from the city center.
+              <br />
+              <br />
+              You can easily find and compare flights to Copenhagen using platforms like <a href="https://kiwi.com/en" target="_blank">Kiwi</a> or <a href="https://skyscanner.com" target="_blank">Skyscanner</a>. 
+              Budget airlines like <a href="https://www.ryanair.com/" target="_blank">Ryanair</a> and <a href="https://www.wizzair.com/en-gb" target="_blank">Wizz Air</a> also operate flights to Copenhagen or nearby <a href="https://www.swedavia.com/malmo/" target="_blank">Malmö Airport (MMX)</a> in Sweden, just across the Øresund Bridge 
+              and <a href="https://www.billund-airport.com/" target="_blank">Billund (BLL)</a> in western Denmark.
+              From there, you can easily reach the city by bus or train, making it a flexible and affordable travel option.
+              <br />
+              <br />
+              Alternatively, if you're traveling from nearby European cities, consider a scenic train ride or a <a href="https://www.flix.com/" target="_blank">FlixBus</a> for a comfortable and budget-friendly journey straight into central Copenhagen.
+            </p>
+            <h4>
+              Safety
+            </h4>
+            <p>
+              Copenhagen is widely regarded as one of the safest cities in the world. In fact, it was ranked <a href="https://studyindenmark.dk/news/copenhagen-ranks-highest-in-the-safe-cities-index-2021/" target="_blank">#1 in the 2021 Economist Safe Cities Index</a>, 
+              thanks to its low crime rates, well-organized infrastructure, and strong social trust.
+              <br />
+              <br />
+              Violent crime is rare, but as with any popular tourist destination, petty theft and pickpocketing can occasionally occur—especially in crowded areas like Nyhavn, Copenhagen Central Station, and public transport.
+            </p>
+            <h4>
+              Budget
+            </h4>
+            <p>
+              Copenhagen is a bit pricier than many European cities, but still manageable with some planning. 
+              <br />
+              <br />
+              Hostel beds usually start around <a href="https://www.booking.com/" target="_blank">25-35 Euros, while private hotel rooms begin at 70-90 Euros</a>. 
+              Dining out can range from 10 to 20 Euros at casual spots. 
+              <br />
+              Public transport is efficient and easy to use, with buses, metro, and trains well connected across the city.
+              <br />
+              <br />
+              Try our <a href="https://my-ai-travel-itinerary-generator.netlify.app/" target="_blank">TravelBot</a> for a detailed overview of activities and meal costs during a 5-day stay in Copenhagen.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center">
+          <div class="about-me-container">
+            <div class="card" style="width: 22rem;">
+              <p class="card-info text-muted mb-4">About me</p>
+              <img src="../images/my-img_1.jpg" alt="">
+              <div class="card-body">
+                <p class="card-text mt-3 my-info">Hey there! I'm <strong><a href="https://charityorhoridiohwo.com" target="_blank">Charity</a></strong>, a Nigerian who has been traveling for a couple of years now.
+                  <br />
+                  <br />
+                  <br />
+                  Though I call <strong><a href="poznan.html" target="_blank">Poznań</a></strong> my second home, my travels take me to <strong><a href="/blog.html">destinations</a></strong> across the globe.
+                  <br />
+                  <br />
+                  Please tag along!
+                </p>
+              </div>
+            </div>
+            <div class="card mt-5" style="width: 22rem;">
+              <p class="card-info text-muted mb-4">Social</p>
+              <div class="card-body grid grid-2-columns">
+                <div class="card-text">
+                  <a href="https://www.instagram.com/t_tthatcherluv?igsh=eGs1enoxNnN5ODN1&utm_source=qr" target="_blank" title="Instagram" class="social-info">
+                    <div>
+                      <i class="fa-brands fa-instagram customized-data-icon"></i>
+                    </div>
+                    <div>
+                      <p>Instagram</p>
+                    </div>
+                  </a>
+                  <a href="https://geovoyagency.com/" target="_blank" title="Contact GeoVoyage" class="social-info">
+                    <div>
+                      <i class="fa-solid fa-passport customized-data-icon"></i>
+                    </div>
+                    <div>
+                      <p>VisaBuddy</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-text">
+                  <a href="https://github.com/CharityO3"  target="_blank" title="Connect on GitHub" class="social-info">
+                    <div>
+                      <i class="fa-brands fa-square-github customized-data-icon"></i>
+                    </div>
+                    <div>
+                      <p>GitHub</p>
+                    </div>
+                  </a>
+                  <a href="mailto:charityorhoridiohwo@gmail.com" target="_blank" title="Contact via Email" class="social-info">
+                    <div>
+                      <i class="fa-solid fa-envelope customized-data-icon"></i>
+                    </div>
+                    <div>
+                      <p>Email</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-5" style="width: 24rem;">
+              <p class="card-info text-muted mb-4">Instagram</p>
+              <div class="card-body">
+                <div class="card-text">
+                  <div class="instagram-row">
+                    <div class="ig-item">
+                      <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DWMv67jk7Eb/"
+                        data-instgrm-version="14">
+                      </blockquote>
+                    </div>
+
+                    <div class="ig-item">
+                      <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DWCKGtsk19h/"
+                        data-instgrm-version="14">
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-text">
+                  <div class="instagram-row">
+                    <div class="ig-item">
+                      <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DWbCM0zDHfE/"
+                        data-instgrm-version="14">
+                      </blockquote>
+                    </div>
+
+                    <div class="ig-item">
+                      <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DWQmiRKDPqr/"
+                        data-instgrm-version="14">
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script async src="https://www.instagram.com/embed.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <footer>
     <div class="social-links text-center portfolio-links ">
       <a href="https://www.instagram.com/t_tthatcherluv?igsh=eGs1enoxNnN5ODN1&utm_source=qr" target="_blank" title="Instagram"><i class="fa-brands fa-instagram mt-5"></i></a>
-      <a href="https://www.linkedin.com/in/charity-orhoridiohwo/" target="_blank" class="social-link" title="Connect on LinkedIn"><i class="fa-brands fa-linkedin"></i></a> 
-      <a href="https://github.com/CharityO3" target="_blank" class="social-link" title="Connect on GitHub"><i class="fa-brands fa-square-github"></i></a> 
-      <a href="mailto:charityorhoridiohwo@gmail.com" class="social-link" id="email-link" title="Contact via Email"><i class="fa-solid fa-envelope"></i></a> 
+      <a href="https://www.linkedin.com/in/charity-orhoridiohwo/" target="_blank" title="Connect on LinkedIn"><i class="fa-brands fa-linkedin"></i></a> 
+      <a href="https://github.com/CharityO3" target="_blank" title="Connect on GitHub"><i class="fa-brands fa-square-github"></i></a> 
+      <a href="mailto:charityorhoridiohwo@gmail.com" id="email-link" title="Contact via Email"><i class="fa-solid fa-envelope"></i></a> 
     </div>
     <div class="fst-italic text-muted improvement"> 
       <p class="text-center mt-5">© GlobeScribe 2025</p>
       <p class="text-center mt-4"><small>This website is continually evolving with constant changes and improvements.</small></p>
     </div>
   </footer>
-
+  
   <script src="../src/script.js"></script>
-
-</body>
-</html>
+</body>  
