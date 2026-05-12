@@ -39,7 +39,7 @@ Feel free to contribute! Whether it’s a new travel story, improved formatting,
 
 ## Author
 
-Coded by [Charity Orhoridiohwo](https://www.linkedin.com/in/charity-orhoridiohwo-548873150/).
+Coded by [Charity Orhoridiohwo](https://www.linkedin.com/in/charityorhoridiohwo).
 Open-sourced on [GitHub](https://github.com/CharityO3/my-travel-blog) and hosted on [Netlify](https://my-globe-journal.netlify.app/). Contributions are welcome!
 
 
