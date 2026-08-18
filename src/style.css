@@ -1256,6 +1256,10 @@ button[type="submit"]:hover {
   .grid-2-columns.city-quick-facts{
     gap: 30px;
   }
+  header nav {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media(max-width:800px){
