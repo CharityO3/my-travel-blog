@@ -1271,5 +1271,10 @@ button[type="submit"]:hover {
   .card{
     margin-top: 20px;
   }
+
+  header nav {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  }
   
 }
