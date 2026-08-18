@@ -1017,6 +1017,126 @@ button[type="submit"]:hover {
   width: 111% !important;
 }
 
+.europe-parent {
+  position: relative;
+}
+
+.europe-parent > .europe-dropdown {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 2px);
+  display: none;
+  width: 520px;
+  min-height: 420px;
+  border-radius: 6px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  overflow: visible;
+}
+
+
+.europe-parent:hover > .europe-dropdown,
+.europe-parent:focus-within > .europe-dropdown {
+  display: flex;
+}
+
+.europe-countries {
+  width: 220px;
+  max-height: 420px;
+  padding: 8px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.europe-country {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.europe-country > a {
+  width: 100%;
+  color: rgba(128, 128, 128, 0.8);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.europe-country:hover > a {
+  color: #ff8a65;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.europe-cities {
+  position: absolute;
+  left: 220px;
+  top: 0;
+  width: 200px;
+  min-height: 40px;
+  background: #000;
+  z-index: 100000;
+  display: none;
+}
+
+.europe-cities:has(.europe-city.is-active) {
+  display: block;
+}
+
+.europe-city {
+  display: none;
+  width: 200px;
+  background: #000;
+  pointer-events: auto;
+}
+
+.europe-city.is-active {
+  display: flex !important;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.europe-city a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  color: rgba(128, 128, 128, 0.8);
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.europe-city a:hover {
+  color: #ff8a65;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.europe-countries::-webkit-scrollbar {
+  width: 6px;
+}
+
+.europe-countries::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.europe-countries::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.europe-countries {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #222;
+}
+
 
 @media(max-width:1024px){
   
@@ -1031,9 +1151,9 @@ button[type="submit"]:hover {
     max-height: 500px; 
   }
 
-  nav ul, .sub-menu-toggle {
-    max-height: auto;
-    overflow-y: auto;
+  nav ul,
+  .sub-menu-toggle {
+  overflow-y: auto;
   }
 
   b{

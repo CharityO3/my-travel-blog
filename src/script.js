@@ -194,9 +194,125 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* =========================================================
+   EUROPE MENU
+   Stable country -> city hover system
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const europeParent = document.querySelector(".europe-parent");
+  const europeDropdown = document.querySelector(".europe-dropdown");
+
+  if (!europeParent || !europeDropdown) {
+    return;
+  }
+
+  const countries = europeDropdown.querySelectorAll(".europe-country");
+  const cities = europeDropdown.querySelectorAll(".europe-city");
+
+  /*
+   * Start with EVERYTHING hidden.
+   * This is important because it prevents Albania
+   * from appearing automatically.
+   */
+  cities.forEach(city => {
+    city.classList.remove("is-active");
+  });
+
+  countries.forEach(country => {
+    country.classList.remove("is-active");
+  });
 
 
+  /*
+   * Show exactly ONE country's cities when hovering
+   * over that country.
+   */
+  countries.forEach(country => {
 
+    country.addEventListener("mouseenter", () => {
+
+      const cityName = country.dataset.cityMenu;
+
+      /*
+       * Remove all previous active states.
+       */
+      countries.forEach(item => {
+        item.classList.remove("is-active");
+      });
+
+      cities.forEach(city => {
+        city.classList.remove("is-active");
+      });
+
+
+      /*
+       * Activate the country being hovered.
+       */
+      country.classList.add("is-active");
+
+
+      /*
+       * Find the matching city menu.
+       *
+       * Example:
+       * data-city-menu="andorra"
+       *
+       * matches:
+       * data-city="andorra"
+       */
+      const matchingCityMenu =
+        europeDropdown.querySelector(
+          `.europe-city[data-city="${cityName}"]`
+        );
+
+      if (matchingCityMenu) {
+        matchingCityMenu.classList.add("is-active");
+      }
+
+    });
+
+  });
+
+
+  /*
+   * When leaving the ENTIRE Europe menu,
+   * clear the selected country.
+   *
+   * This means that simply hovering "Europe"
+   * does NOT show Albania or any other country.
+   */
+  europeDropdown.addEventListener("mouseleave", () => {
+
+    countries.forEach(country => {
+      country.classList.remove("is-active");
+    });
+
+    cities.forEach(city => {
+      city.classList.remove("is-active");
+    });
+
+  });
+
+
+  /*
+   * When entering Europe itself, make sure
+   * no country is accidentally selected.
+   */
+  europeParent.addEventListener("mouseenter", () => {
+
+    countries.forEach(country => {
+      country.classList.remove("is-active");
+    });
+
+    cities.forEach(city => {
+      city.classList.remove("is-active");
+    });
+
+  });
+
+});
 
 
 

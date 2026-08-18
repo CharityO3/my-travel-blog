@@ -82,6 +82,11 @@
       border: 1px solid rgba(128, 128, 128, 0.2);
     }
 
+    header ul li ul li > ul {
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+
     header ul li ul li ul{
       top:0;
       left: 200px;
@@ -224,39 +229,160 @@
     <div class="menu-toggle" id="menuToggle"></div>
     <nav>
       <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog.html">Blog</a></li>
         <li>
-          <a href="#">DESTINATIONS<b>▼</b></a>
-          <ul>
+          <a href="#">Destinations<i class="fa-solid fa-chevron-down down-arrow sub-toggle"></i></a>
+          <ul class="sub-menu-toggle">
             <li>
-              <a href="#">🌍 AFRICA <b>›</b></a>
-              <ul>
-                <li><a href="#">🇳🇬 NIGERIA</a></li>
-                <li><a href="#">🇪🇬 EGYPT</a></li>
+              <a href="#">🌍 Africa <b class="sub-toggle">›</b></a>
+              <ul class="sub-menu-toggle">
+                <li><a href="#">🇳🇬 Nigeria <b class="sub-toggle">›</b></a>
+                <ul class="sub-menu-toggle">
+                  <li><a href="../Cities/abuja.html">Abuja</a></li>
+                  <li><a href="../Cities/lagos.html">Lagos</a></li>
+                </ul>
+              </li>
+                <li><a href="#">🇪🇬 Egypt <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/cairo.html">Cairo</a></li>
+                    <li><a href="../Cities/hurghada.html">Hurghada</a></li>
+                    <li><a href="../Cities/luxor.html">Luxor</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li>
-              <a href="#">🌍 EUROPE <b>›</b></a>
-              <ul>
-                <li><a href="#">🇩🇪 GERMANY</a></li>
-                <li><a href="#">🇭🇺 HUNGARY</a></li>
-                <li><a href="#">🇬🇧 UNITED KINGDOM</a></li>
-                <li><a href="#">🇪🇪 ESTONIA</a></li>
-                <li><a href="#">🇫🇮 FINLAND</a></li>
-                <li><a href="#">🇭🇷 CROATIA</a></li>
-                <li><a href="#">🇲🇪 MONTENEGRO</a></li>
+              <a href="#">🌍 Asia <b class="sub-toggle">›</b></a>
+              <ul class="sub-menu-toggle">
+                <li><a href="#">🇹🇭 Thailand <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/bangkok.html">Bangkok</a></li>
+                    <li><a href="../Cities/phuket.html">Phuket</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li>
-              <a href="#">🌍 ASIA <b>›</b></a>
-              <ul>
-                <li><a href="#">🇹🇭 THAILAND</a></li>
+              <a href="#">🌍 Europe <b class="sub-toggle">›</b></a>
+              <ul class="sub-menu-toggle">
+                <li><a href="#">🇦🇱 Albania <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/ksamil.html">Ksamil</a></li>
+                    <li><a href="../Cities/sarande.html">Sarandë</a></li>
+                    <li><a href="../Cities/tirane.html">Tiranë</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇦🇩 Andorra <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/andorra.html">Andorra</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇧🇪 Belgium <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/brussels.html">Brussels</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇭🇷 Croatia <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/dubrovnik.html">Dubrovnik</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇩🇰 Denmark <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/copenhagen.html">Copenhagen</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇪🇪 Estonia <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/tallinn.html">Tallinn</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇫🇮 Finland <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/helsinki.html">Helsinki</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇫🇷 France <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/nice.html">Nice</a></li>
+                    <li><a href="../Cities/cannes.html">Cannes</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇩🇪 Germany <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/berlin.html">Berlin</a></li>
+                    <li><a href="../Cities/dusseldorf.html">Düsseldorf</a></li>
+                    <li><a href="../Cities/leipzig.html">Leipzig</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇬🇷 Greece <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/corfu.html">Corfu</a></li> 
+                  </ul>
+                </li>
+                <li><a href="#">🇭🇺 Hungary <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/budapest.html">Budapest</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇮🇹 Italy <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/venice.html">Venice</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇱🇺 Luxembourg <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/luxembourg.html">Luxembourg </a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇲🇨 Monaco <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/monaco.html">Monaco</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇲🇪 Montenegro <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/kotor.html">Kotor</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇳🇴 Norway <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/oslo.html">Oslo</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇵🇱 Poland <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/gdansk.html">Gdańsk</a></li>
+                    <li><a href="../Cities/krakow.html">Kraków</a></li>
+                    <li><a href="../Cities/poznan.html">Poznań</a></li>
+                    <li><a href="../Cities/warsaw.html">Warsaw</a></li>
+                    <li><a href="../Cities/wroclaw.html">Wrocław</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇪🇸 Spain <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/barcelona.html">Barcelona</a></li>
+                  </ul>
+                </li>
+                
+                <li><a href="#">🇨🇭 Switzerland <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/bern.html">Bern</a></li>
+                    <li><a href="../Cities/zurich.html">Zurich</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">🇬🇧 United Kingdom <b class="sub-toggle">›</b></a>
+                  <ul class="sub-menu-toggle">
+                    <li><a href="../Cities/liverpool.html">Liverpool</a></li>
+                    <li><a href="../Cities/london.html">London</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="/contact.html">CONTACT</a></li>
+        <li><a href="/contacts.html">Contact</a></li>
       </ul>
     </nav>
   </header>
