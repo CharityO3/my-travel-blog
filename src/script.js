@@ -194,135 +194,371 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* =========================================================
-   EUROPE MENU
-   Stable country -> city hover system
-   ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const dropdown = document.querySelector(".europe-dropdown");
+  const countriesPanel = document.querySelector(".europe-countries");
+  const citiesPanel = document.querySelector(".europe-cities");
+
+  if (!dropdown || !countriesPanel || !citiesPanel) return;
+
+  const countries = document.querySelectorAll(".europe-country");
+  const cities = document.querySelectorAll(".europe-city");
+
+  let activeCountry = null;
+
+  function positionCities(country) {
+    const dropdownRect = dropdown.getBoundingClientRect();
+    const countryRect = country.getBoundingClientRect();
+
+    const topPosition = countryRect.top - dropdownRect.top;
+
+    citiesPanel.style.top = `${topPosition}px`;
+  }
+
+  function showCities(country) {
+    const cityName = country.getAttribute("data-city-menu");
+
+    cities.forEach(city => {
+      city.classList.remove("is-active");
+    });
+
+    const matchingCity = document.querySelector(
+      `.europe-city[data-city="${cityName}"]`
+    );
+
+    if (!matchingCity) return;
+
+    matchingCity.classList.add("is-active");
+
+    activeCountry = country;
+
+    positionCities(country);
+  }
+
+  function hideCities() {
+    cities.forEach(city => {
+      city.classList.remove("is-active");
+    });
+
+    activeCountry = null;
+    citiesPanel.style.top = "0px";
+  }
+
+  countries.forEach(country => {
+
+    country.addEventListener("mouseenter", function () {
+      showCities(this);
+    });
+
+    const link = country.querySelector(":scope > a");
+
+    if (link) {
+      link.addEventListener("click", function (event) {
+        if (window.innerWidth > 1024) {
+          event.preventDefault();
+        }
+      });
+    }
+  });
+
+  countriesPanel.addEventListener("scroll", function () {
+    if (activeCountry) {
+      positionCities(activeCountry);
+    }
+  });
+
+  citiesPanel.addEventListener("mouseenter", function () {
+  });
+
+  dropdown.addEventListener("mouseleave", function () {
+    hideCities();
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
 
   const europeParent = document.querySelector(".europe-parent");
+  const europeTrigger = document.querySelector(".europe-trigger");
   const europeDropdown = document.querySelector(".europe-dropdown");
+  const countries = document.querySelectorAll(".europe-country");
+  const citiesPanel = document.querySelector(".europe-cities");
+  const cities = document.querySelectorAll(".europe-city");
 
-  if (!europeParent || !europeDropdown) {
+  if (
+    !europeParent ||
+    !europeTrigger ||
+    !europeDropdown ||
+    !citiesPanel
+  ) {
     return;
   }
 
-  const countries = europeDropdown.querySelectorAll(".europe-country");
-  const cities = europeDropdown.querySelectorAll(".europe-city");
 
-  /*
-   * Start with EVERYTHING hidden.
-   * This is important because it prevents Albania
-   * from appearing automatically.
-   */
-  cities.forEach(city => {
-    city.classList.remove("is-active");
-  });
+  /* =======================================================
+     EUROPE MAIN BUTTON — MOBILE ONLY
+     ======================================================= */
 
-  countries.forEach(country => {
-    country.classList.remove("is-active");
-  });
+  europeTrigger.addEventListener("click", function (event) {
 
+    if (window.innerWidth > 1024) {
+      return;
+    }
 
-  /*
-   * Show exactly ONE country's cities when hovering
-   * over that country.
-   */
-  countries.forEach(country => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
 
-    country.addEventListener("mouseenter", () => {
+    const isOpen = europeParent.classList.contains("open");
 
-      const cityName = country.dataset.cityMenu;
+    if (isOpen) {
 
-      /*
-       * Remove all previous active states.
-       */
-      countries.forEach(item => {
-        item.classList.remove("is-active");
+      /* CLOSE EUROPE */
+
+      europeParent.classList.remove("open");
+
+      europeDropdown.style.display = "none";
+
+      citiesPanel.classList.remove("mobile-active");
+
+      cities.forEach(function (city) {
+        city.classList.remove("is-active");
       });
 
-      cities.forEach(city => {
+    } else {
+
+      /* OPEN EUROPE */
+
+      europeParent.classList.add("open");
+
+      europeDropdown.style.display = "flex";
+
+    }
+
+  }, true);
+
+
+  /* =======================================================
+     COUNTRY BUTTONS — MOBILE ONLY
+     ======================================================= */
+
+  countries.forEach(function (country) {
+
+    const countryLink = country.querySelector(":scope > a");
+
+    if (!countryLink) {
+      return;
+    }
+
+
+    countryLink.addEventListener("click", function (event) {
+
+      if (window.innerWidth > 1024) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+
+      /* Get the country name */
+
+      const cityName = country.getAttribute("data-city-menu");
+
+      if (!cityName) {
+        return;
+      }
+
+
+      /* Find matching city group */
+
+      let matchingCity = null;
+
+      cities.forEach(function (city) {
+
+        if (city.getAttribute("data-city") === cityName) {
+          matchingCity = city;
+        }
+
+      });
+
+
+      if (!matchingCity) {
+        console.log("No matching city menu for:", cityName);
+        return;
+      }
+
+
+      /* Is this country already open? */
+
+      const alreadyOpen =
+        matchingCity.classList.contains("is-active");
+
+
+      /* Close all city groups */
+
+      cities.forEach(function (city) {
         city.classList.remove("is-active");
       });
 
 
-      /*
-       * Activate the country being hovered.
-       */
-      country.classList.add("is-active");
+      /* If it was already open, close the cities panel */
 
+      if (alreadyOpen) {
 
-      /*
-       * Find the matching city menu.
-       *
-       * Example:
-       * data-city-menu="andorra"
-       *
-       * matches:
-       * data-city="andorra"
-       */
-      const matchingCityMenu =
-        europeDropdown.querySelector(
-          `.europe-city[data-city="${cityName}"]`
-        );
+        citiesPanel.classList.remove("mobile-active");
 
-      if (matchingCityMenu) {
-        matchingCityMenu.classList.add("is-active");
+        return;
       }
 
-    });
 
-  });
+      /* Open the selected city group */
 
+      matchingCity.classList.add("is-active");
 
-  /*
-   * When leaving the ENTIRE Europe menu,
-   * clear the selected country.
-   *
-   * This means that simply hovering "Europe"
-   * does NOT show Albania or any other country.
-   */
-  europeDropdown.addEventListener("mouseleave", () => {
-
-    countries.forEach(country => {
-      country.classList.remove("is-active");
-    });
-
-    cities.forEach(city => {
-      city.classList.remove("is-active");
-    });
-
-  });
+      citiesPanel.classList.add("mobile-active");
 
 
-  /*
-   * When entering Europe itself, make sure
-   * no country is accidentally selected.
-   */
-  europeParent.addEventListener("mouseenter", () => {
+      /* Make absolutely sure Europe itself stays open */
 
-    countries.forEach(country => {
-      country.classList.remove("is-active");
-    });
+      europeParent.classList.add("open");
 
-    cities.forEach(city => {
-      city.classList.remove("is-active");
-    });
+      europeDropdown.style.display = "flex";
+
+    }, true);
 
   });
 
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+
+//   const europeParent = document.querySelector(".europe-parent");
+//   const europeTrigger = document.querySelector(".europe-trigger");
+//   const europeDropdown = document.querySelector(".europe-dropdown");
+//   const countries = document.querySelectorAll(".europe-country");
+//   const citiesPanel = document.querySelector(".europe-cities");
+//   const cities = document.querySelectorAll(".europe-city");
+
+//   if (
+//     !europeParent ||
+//     !europeTrigger ||
+//     !europeDropdown ||
+//     !citiesPanel
+//   ) {
+//     return;
+//   }
 
 
+//   /* =======================================================
+//      EUROPE MAIN BUTTON
+//      ======================================================= */
+
+//   europeTrigger.addEventListener("click", function (event) {
+
+//     /* Desktop does absolutely nothing here */
+//     if (window.innerWidth > 1024) {
+//       return;
+//     }
+
+//     /*
+//        Capture + stopImmediatePropagation is intentional.
+
+//        Your existing navigation JavaScript may also have
+//        a click handler for .sub-toggle or the parent menu.
+//        This makes the Europe click belong ONLY to Europe.
+//     */
+//     event.preventDefault();
+//     event.stopImmediatePropagation();
+
+//     const isOpen = europeParent.classList.contains("open");
+
+//     if (isOpen) {
+
+//       /* CLOSE EUROPE */
+//       europeParent.classList.remove("open");
+
+//       europeDropdown.style.display = "none";
+
+//       citiesPanel.classList.remove("mobile-active");
+
+//       cities.forEach(function (city) {
+//         city.classList.remove("is-active");
+//       });
+
+//     } else {
+
+//       /* OPEN EUROPE */
+//       europeParent.classList.add("open");
+
+//       europeDropdown.style.display = "block";
+//     }
+
+//   }, true);
 
 
+//   /* =======================================================
+//      COUNTRY BUTTONS
+//      ======================================================= */
+
+//   countries.forEach(function (country) {
+
+//     const countryLink = country.querySelector(":scope > a");
+
+//     if (!countryLink) {
+//       return;
+//     }
+
+//     countryLink.addEventListener("click", function (event) {
+
+//       /* Desktop is untouched */
+//       if (window.innerWidth > 1024) {
+//         return;
+//       }
+
+//       event.preventDefault();
+//       event.stopImmediatePropagation();
+
+//       const cityName = country.getAttribute("data-city-menu");
+
+//       const matchingCity = document.querySelector(
+//         '.europe-city[data-city="' + cityName + '"]'
+//       );
+
+//       if (!matchingCity) {
+//         return;
+//       }
 
 
+//       /* Is this country already open? */
+//       const alreadyOpen =
+//         matchingCity.classList.contains("is-active");
 
 
+//       /* Close ALL city lists first */
+//       cities.forEach(function (city) {
+//         city.classList.remove("is-active");
+//       });
 
 
+//       /* If it was already open, leave everything closed */
+//       if (alreadyOpen) {
+
+//         citiesPanel.classList.remove("mobile-active");
+
+//         return;
+//       }
 
 
+//       /* Open the selected country's cities */
+//       matchingCity.classList.add("is-active");
+
+//       citiesPanel.classList.add("mobile-active");
+
+//     }, true);
+
+//   });
+
+// });

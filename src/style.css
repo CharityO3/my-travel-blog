@@ -1380,10 +1380,111 @@ button[type="submit"]:hover {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   }
+
+  .europe-parent {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .europe-parent > .europe-dropdown {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    display: none !important;
+    background: #D3CCE3 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  .europe-parent.open > .europe-dropdown {
+    display: block !important;
+  }
+
+
+  /* COUNTRIES */
+
+  .europe-countries {
+    width: 100% !important;
+    max-height: 300px !important;
+    padding: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background: #D3CCE3 !important;
+  }
+
+  .europe-country {
+    width: 100% !important;
+    background: #D3CCE3 !important;
+  }
+
+  .europe-country > a {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    padding: 8px 12px !important;
+    background: #D3CCE3 !important;
+    color: #000 !important;
+  }
+
+
+  /* CITIES */
+
+  .europe-cities {
+    position: relative !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    min-height: 0 !important;
+    display: none !important;
+    background: #D3CCE3 !important;
+  }
+
+  .europe-cities.mobile-active {
+    display: block !important;
+  }
+
+  .europe-city {
+    display: none !important;
+    width: 100% !important;
+    background: #D3CCE3 !important;
+  }
+
+  .europe-city.is-active {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .europe-city a {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 8px 25px !important;
+    background: #D3CCE3 !important;
+    color: #000 !important;
+  }
+
 }
+
+
+
 
 @media(max-width:800px){
   
+ 
+ .europe-countries {
+    max-height: 260px !important;
+  }
+
+  .europe-cities,
+  .europe-city {
+    width: 100% !important;
+  }
+
   .city-container{
     margin-top: 100px;
   }
