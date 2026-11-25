@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const countries = europeParent.querySelectorAll(".europe-country");
   const cities = Array.from(europeParent.querySelectorAll(".europe-city"));
 
-  const isMobile = () => window.innerWidth <= 1024;
+  const isMobile = () => window.innerWidth <= 1280;
 
   let activeCountry = null;
 

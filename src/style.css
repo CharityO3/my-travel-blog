@@ -1138,7 +1138,7 @@ button[type="submit"]:hover {
 }
 
 
-@media(max-width:1024px){
+@media(max-width:1280px){
   
   .sub-menu-toggle {
     max-height: 0;
@@ -1467,7 +1467,7 @@ button[type="submit"]:hover {
 }
 
 
-@media(max-width:800px){
+@media(max-width:768px){
 
   .europe-cities,
   .europe-city {
