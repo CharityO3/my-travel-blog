@@ -1402,20 +1402,22 @@ button[type="submit"]:hover {
     background: #D3CCE3 !important;
     box-shadow: none !important;
     overflow: visible !important;
+    
   }
 
   .europe-parent.open > .europe-dropdown {
     display: flex !important;
   }
 
-  .europe-countries {
+ .europe-countries {
     position: relative !important;
     width: 100% !important;
-    max-height: 260px !important;
+    max-height: none !important;
     padding: 0 !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
+    overflow: visible !important;
     background: #D3CCE3 !important;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 
   .europe-country {
@@ -1466,11 +1468,6 @@ button[type="submit"]:hover {
 
 
 @media(max-width:800px){
-  
- 
- .europe-countries {
-    max-height: 260px !important;
-  }
 
   .europe-cities,
   .europe-city {

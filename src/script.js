@@ -348,12 +348,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* Close menu when clicking outside - mobile only */
-  document.addEventListener("click", function(event) {
+  document.addEventListener("pointerdown", function (event) {
+    if (!isMobile()) return;
 
-    if (isMobile() && !europeParent.contains(event.target)) {
+    const clickedInsideEurope = europeParent.contains(event.target);
+
+    if (!clickedInsideEurope) {
       closeEurope();
     }
-
   });
 
   /* Restore original desktop structure on resize */
