@@ -1381,129 +1381,88 @@ button[type="submit"]:hover {
   -webkit-overflow-scrolling: touch;
   }
 
+  /* EUROPE DROPDOWN - SMALL SCREENS ONLY */
+/* EUROPE - MOBILE ONLY */
+
   .europe-parent {
     width: 100% !important;
+    max-height: none !important;
     overflow: visible !important;
   }
 
-  /* Let the existing navigation code open Europe */
   .europe-parent > .europe-dropdown {
+    display: none !important;
     position: relative !important;
     top: auto !important;
     left: auto !important;
-
     width: 100% !important;
     min-height: 0 !important;
-
+    max-height: none !important;
+    flex-direction: column !important;
     background: #D3CCE3 !important;
     box-shadow: none !important;
-    border-radius: 0 !important;
-
     overflow: visible !important;
+  }
+
+  .europe-parent.open > .europe-dropdown {
+    display: flex !important;
   }
 
   .europe-countries {
     position: relative !important;
-
     width: 100% !important;
-    max-height: 300px !important;
-
+    max-height: 260px !important;
     padding: 0 !important;
-
     overflow-y: auto !important;
     overflow-x: hidden !important;
-
     background: #D3CCE3 !important;
   }
 
   .europe-country {
+    display: block !important;
     width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-
+    max-height: none !important;
+    overflow: visible !important;
     background: #D3CCE3 !important;
   }
 
   .europe-country > a {
-    width: 100% !important;
-    box-sizing: border-box !important;
-
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-
+    width: 100% !important;
     padding: 8px 12px !important;
-
-    background: #D3CCE3 !important;
+    box-sizing: border-box !important;
     color: #000 !important;
+    background: #D3CCE3 !important;
   }
 
-  .europe-country > a:hover {
-    background: #D3CCE3 !important;
-    color: #000 !important;
-  }
-
-  /* Cities appear underneath the country list */
+  /* Hide the original separate cities panel on mobile */
   .europe-cities {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-
-    width: 100% !important;
-    min-height: 0 !important;
-
     display: none !important;
-
-    background: #D3CCE3 !important;
-    overflow: visible !important;
   }
 
-  .europe-cities.mobile-active {
-    display: block !important;
-  }
-
-  .europe-city {
-    display: none !important;
-
-    width: 100% !important;
-
-    background: #D3CCE3 !important;
-  }
-
-  .europe-city.is-active {
+  /* Show cities directly underneath the selected country */
+  .europe-countries > .europe-city.is-active {
     display: flex !important;
-
+    position: relative !important;
     flex-direction: column !important;
-
     width: 100% !important;
-
-    gap: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #D3CCE3 !important;
   }
 
   .europe-city a {
     display: block !important;
-
     width: 100% !important;
-    box-sizing: border-box !important;
-
     padding: 8px 25px !important;
-
-    background: #D3CCE3 !important;
+    box-sizing: border-box !important;
     color: #000 !important;
-
-    text-decoration: none !important;
-
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-  }
-
-  .europe-city a:hover {
     background: #D3CCE3 !important;
-    color: #000 !important;
   }
 
 }
-
-
 
 
 @media(max-width:800px){
@@ -1534,5 +1493,5 @@ button[type="submit"]:hover {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   }
-  
+
 }
